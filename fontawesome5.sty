@@ -10,13 +10,7 @@
 % Define shortcut to load the Font Awesome font for brands.
 \newfontfamily{\FAbrands}[Path=\@fontdir]{Font Awesome 5 Brands-Regular-400}
 % Define shortcut to load the Font Awesome font.
-\@ifundefined{FA}{%
-\newfontfamily\FA[
-  Path=\@fontdir,
-  UprightFont=*-Regular-400,
-  BoldFont=*-Solid-900,
-]{Font Awesome 5 Free}
-}{}
+\newfontfamily\FA[Path=\@fontdir]{Font Awesome 5 Free-Solid-900}
 % Generic command displaying an icon by its name.
 \newcommand*{\fa}[1]{{
   \csname fa@#1\endcsname
