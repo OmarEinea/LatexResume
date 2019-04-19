@@ -180,33 +180,30 @@
   {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
 }
 
-\newcommand{\cvsubsection}[1]{%
-  \smallskip%
-  {\color{emphasis}\large\bfseries{#1}\par}\medskip
+\newcommand{\cvtitle}[1]{%
+  {\color{emphasis}\bfseries{#1}}
+  \smallskip
 }
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
   \smallskip\normalsize
-  \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
-  \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\fa{calendar-alt}\hspace{0.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\fa{map-marker-alt}\hspace{0.5em}#4}}}\par
+  \ifstrequal{#2}{}{}{\textbf{\color{accent}#2}\par}
+  \ifstrequal{#3}{}{}{{\smallskip\small\makebox[.5\linewidth][l]{\hspace{-.2em}\fa{calendar-alt}\hspace{.5em}#3}}}%
+  \ifstrequal{#4}{}{}{{\small\makebox[.5\linewidth][l]{\fa{map-marker-alt}\hspace{.5em}#4}}}\par
   \medskip\normalsize
 }
 
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-  \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
-  & #3
+  \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\ & #3
   \end{tabularx}%
   \smallskip
 }
 
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep=.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
 \newcommand{\cvskill}[2]{%
