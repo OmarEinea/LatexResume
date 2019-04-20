@@ -118,16 +118,18 @@
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
 
+\newcommand{\sidecolumn}[1]{\def\@sidecolumn{#1}}
+
 \newcommand{\cvsection}[2][]{%
   \bigskip%
-  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
+  \ifstrequal{#1}{sidecolumn}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\@sidecolumn}}{}%
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
   {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
 }
 
 \newcommand{\cvtitle}[1]{%
   {\color{emphasis}\bfseries{#1}}
-  \smallskip
+  \medskip
 }
 
 \newcommand{\cvevent}[4]{%
@@ -140,10 +142,11 @@
 }
 
 \newcommand{\cvachievement}[3]{%
+  \smallskip
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
   \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\ & #3
   \end{tabularx}%
-  \smallskip
+  \medskip
 }
 
 \newcommand{\cvtag}[1]{%
