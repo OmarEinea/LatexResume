@@ -1,0 +1,145 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper]{altacv}
+\AtBeginEnvironment{itemize}{\small}
+\usepackage{hyperref}
+
+\geometry{top=1.3cm,bottom=1.3cm,left=1.2cm,right=9cm,marginparwidth=6.8cm,marginparsep=1cm}
+
+\setmainfont{Lato}
+\definecolor{heading}{HTML}{1a237e}
+\definecolor{accent}{HTML}{283593}
+\definecolor{emphasis}{HTML}{212121}
+\definecolor{body}{HTML}{424242}
+
+\begin{document}
+
+\name{Omar Einea}
+\tagline{Research Assistant and Master's Student}
+\photo{2.75cm}{profile}
+\personalinfo{
+  \phone{+971566540038}
+  \email{\href{mailto:contact@omareinea.com}{contact@omareinea.com}}
+  \smallskip\par
+  \homepage{\href{https://omareinea.com}{omareinea.com}\ \ \ }
+  \location{United Arab Emirates}
+}
+
+\begin{fullwidth}
+  \makecvheader
+\end{fullwidth}
+
+\sidecolumn{
+  \cvsection{Most Proud of}
+
+  \cvachievement{\fa{medal}}{Winning Contests}{
+    Ranked 1st and 2nd places at hackathons, awarded a total of 17000AED.
+  }\\\divider
+
+  \cvachievement{\fa{book}}{
+    Spreading Knowledge}{Held several workshops about Flutter, Android, TensorFlow, Blender, GIMP and other tools and frameworks.
+  }\\\divider
+
+  \cvachievement{\fa{user-graduate}}{Highest Honors}{
+    Graduated with an A grade in nearly all university courses.
+  }\\\divider
+
+  \cvachievement{\fa{paragraph}}{Scholarly Publications}{
+    Co-authored 4 journal and conference papers in data science fields.
+  }
+
+  \cvsection{Skills}
+  \smallskip
+
+  \cvtag{Full-Stack Web Development}
+  \smallskip
+
+  \cvtag{UI Design}\cvtag{REST APIs}\cvtag{Web Scraping}
+
+  \divider
+
+  \cvtag{JavaScript}\cvtag{ReactJS}\cvtag{AngularJS}
+  \smallskip
+
+  \cvtag{Python}\cvtag{Django}\cvtag{Flask}\cvtag{SQL}
+  \smallskip
+
+  \cvtag{Git}\cvtag{Firebase}\cvtag{HTML}\cvtag{CSS}
+  \medskip
+
+  \cvsection{Languages}
+
+  \cvtitle{English:} Full Professional Proficiency
+  \cvtitle{Arabic:} Native Language
+
+  \cvsection{Education}
+
+  \cvevent{M.Sc. in Computer Science}{University of Sharjah}{Sep 2018 - Present}{}
+  Thesis in Machine Learning.
+
+  \divider
+
+  \cvevent{B.Sc. in IT and Multimedia}{University of Sharjah}{Sep 2014 - Jun 2018}{}
+  Graduated with 3.94 / 4.0 GPA.
+}
+
+\cvsection[sidecolumn]{Experience}
+
+\cvevent{Web Developer Intern}{Emirates Islamic}{Summer 2017}{Dubai}
+\begin{itemize}
+  \item Developed an \emph{AngularJS} web page to dynamically display tabular reports.  
+  \item Used \emph{SharePoint} to host my project and integrate it with a database.
+\end{itemize}
+
+\divider
+
+\cvevent{Research Assistant}{University of Sharjah}{Jan 2018 – Present}{Sharjah}
+\begin{itemize}
+  \item Collected millions of text articles using \emph{Python}'s Web Scraping tools.
+  \item Designed several \emph{Machine Learning} models and trained them on our data.
+  \item Automated lots of tasks, created some apps and worked on data analysis.
+\end{itemize}
+
+\divider
+
+\cvevent{Teaching Assistant}{University of Sharjah}{Sep 2017 – May 2018}{Sharjah}
+\begin{itemize}
+  \item Assisted in conducting \emph{C++} Programming labs and grading homework.
+  \item Developed an application to detect cheating in coding assignments.
+\end{itemize}
+\smallskip
+
+\cvsection{Projects}
+
+\cvevent{UOS HUB}{Senior College Project}{}{}
+\begin{itemize}
+  \item A website designed to unify all University of Sharjah websites in one place.
+  \item It scrapes all student data and displays them in a user-friendly interface.
+  \item Developed using a \emph{Python Django} back-end and an \emph{AngularJS} front-end.
+\end{itemize}
+
+\divider
+
+\cvevent{One Click Donation}{Emirates NBD Contest (Winning Project)}{}{}
+\begin{itemize}
+  \item A donation management system embedded in a mock-up of bank's website.
+  \item It has a customizable ``Donate'' button, history, leaderboard, and awards.
+  \item Developed using a \emph{Python Flask} back-end with \emph{PostgreSQL} database.
+\end{itemize}
+
+\divider
+
+\cvevent{Interactive Resume}{Personal Website}{}{}
+\begin{itemize}
+  \item Visually and interactively displays my projects, skills, information, and more.
+  \item Developed using a \emph{ReactJS} front-end and linked with a \emph{Firebase} database.
+\end{itemize}
+\smallskip
+
+\cvsection{Activities}
+\begin{itemize}
+  \item Attended numerous workshops, hackathons, and programming contests.
+  \item Organized and volunteered in many Computer Science related events.
+  \item Active member of Sharjah Google Developer Group and OpenUAE.
+\end{itemize}
+
+\end{document}
