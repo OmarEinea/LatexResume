@@ -1,0 +1,7 @@
+# Ignore tex logs and cache
+*.aux
+*.log
+*.out
+*.bcf
+*.run.xml
+*.synctex.gz
