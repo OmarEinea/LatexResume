@@ -94,6 +94,9 @@
 \newcommand{\location}[1]{\printinfo{\fa{map-marker-alt}}{#1}}
 
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
+\newcommand{\skills}[1]{\def\skillssection{#1}}
+\newcommand{\projects}[1]{\def\projectssection{#1}}
+\newcommand{\sidecolumn}[1]{\def\@sidecolumn{#1}}
 
 \newcommand{\makecvheader}{%
   \begingroup
@@ -117,8 +120,6 @@
 }
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
-
-\newcommand{\sidecolumn}[1]{\def\@sidecolumn{#1}}
 
 \newcommand{\cvsection}[2][]{%
   \bigskip%
