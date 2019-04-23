@@ -11,23 +11,22 @@
 \definecolor{emphasis}{HTML}{212121}
 \definecolor{body}{HTML}{424242}
 
-\newcommand{\projects}[1]{\def\myprojects{#1}}
+\newcommand{\details}[1]{\def\mydetails{#1}}
+\newcommand{\achievements}[1]{\def\myachievements{#1}}
 \newcommand{\skills}[1]{\def\myskills{#1}}
+\newcommand{\languages}[1]{\def\mylanguages{#1}}
+\newcommand{\education}[1]{\def\myeducation{#1}}
+\newcommand{\experience}[1]{\def\myexperience{#1}}
+\newcommand{\projects}[1]{\def\myprojects{#1}}
+\newcommand{\activities}[1]{\def\myactivities{#1}}
 \ifdef\myjob{}{\def\myjob{jobs/web}}
 
 \begin{document}
 
+\input{jobs/common}
 \input{\myjob}
-\name{Omar Einea}
-\tagline{Research Assistant and Master's Student}
-\photo{2.75cm}{profile}
-\personalinfo{
-  \phone{+971566540038}
-  \email{\href{mailto:contact@omareinea.com}{contact@omareinea.com}}
-  \smallskip\par
-  \homepage{\href{https://omareinea.com}{omareinea.com}\ \ \ }
-  \location{United Arab Emirates}
-}
+
+\mydetails
 
 \begin{fullwidth}
   \makecvheader
@@ -36,21 +35,7 @@
 \sidecolumn{
   \cvsection{Most Proud of}
 
-  \cvachievement{\fa{medal}}{Winning Contests}{
-    Ranked 1st and 2nd places at hackathons, awarded a total of 17000AED.
-  }\\\divider
-
-  \cvachievement{\fa{book}}{
-    Spreading Knowledge}{Held several workshops about Flutter, Android, TensorFlow, Blender, GIMP and other tools and frameworks.
-  }\\\divider
-
-  \cvachievement{\fa{user-graduate}}{Highest Honors}{
-    Graduated with an A grade in nearly all university courses.
-  }\\\divider
-
-  \cvachievement{\fa{paragraph}}{Scholarly Publications}{
-    Co-authored 4 journal and conference papers in data science fields.
-  }
+  \myachievements
 
   \cvsection{Skills}
   \smallskip
@@ -60,44 +45,17 @@
 
   \cvsection{Languages}
 
-  \cvtitle{English:} Full Professional Proficiency
-  \cvtitle{Arabic:} Native Language
+  \mylanguages
 
   \cvsection{Education}
 
-  \cvevent{M.Sc. in Computer Science}{University of Sharjah}{Sep 2018 - Present}{}
-  Thesis in Machine Learning.
-
-  \divider
-
-  \cvevent{B.Sc. in IT and Multimedia}{University of Sharjah}{Sep 2014 - Jun 2018}{}
-  Graduated with 3.94 / 4.0 GPA.
+  \myeducation
 }
 
 \cvsection[sidecolumn]{Experience}
 
-\cvevent{Web Developer Intern}{Emirates Islamic}{Summer 2017}{Dubai}
-\begin{itemize}
-  \item Developed an \emph{AngularJS} web page to dynamically display tabular reports.  
-  \item Used \emph{SharePoint} to host my project and integrate it with a database.
-\end{itemize}
+\myexperience
 
-\divider
-
-\cvevent{Research Assistant}{University of Sharjah}{Jan 2018 – Present}{Sharjah}
-\begin{itemize}
-  \item Collected millions of text articles using \emph{Python}'s Web Scraping tools.
-  \item Designed several \emph{Machine Learning} models and trained them on our data.
-  \item Automated lots of tasks, created some apps and worked on data analysis.
-\end{itemize}
-
-\divider
-
-\cvevent{Teaching Assistant}{University of Sharjah}{Sep 2017 – May 2018}{Sharjah}
-\begin{itemize}
-  \item Assisted in conducting \emph{C++} Programming labs and grading homework.
-  \item Developed an application to detect cheating in coding assignments.
-\end{itemize}
 \smallskip
 
 \cvsection{Projects}
@@ -106,10 +64,7 @@
 \smallskip
 
 \cvsection{Activities}
-\begin{itemize}
-  \item Attended numerous workshops, hackathons, and programming contests.
-  \item Organized and volunteered in many Computer Science related events.
-  \item Active member of Sharjah Google Developer Group and OpenUAE.
-\end{itemize}
+
+\myactivities
 
 \end{document}
