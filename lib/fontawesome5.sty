@@ -3,14 +3,11 @@
 \ProvidesPackage{fontawesome5}[2019/03/21 v5.8.1 font awesome icons]
 % Requirements to use.
 \usepackage{fontspec}
-% Configure a directory location for fonts(default: 'fonts/')
-\newcommand*{\fontdir}[1][fontawesome5/]{\def\@fontdir{#1}}
-\fontdir
 \ProcessOptions\relax
 % Define shortcut to load the Font Awesome font for brands.
-\newfontfamily{\FAbrands}[Path=\@fontdir]{Font Awesome 5 Brands-Regular-400}
+\newfontfamily\FAbrands[Path=lib/]{fontawesome5_brandsregular}
 % Define shortcut to load the Font Awesome font.
-\newfontfamily\FA[Path=\@fontdir]{Font Awesome 5 Free-Solid-900}
+\newfontfamily\FA[Path=lib/]{fontawesome5_freesolid}
 % Generic command displaying an icon by its name.
 \newcommand*{\fa}[1]{{
   \csname fa@#1\endcsname

@@ -1,5 +1,5 @@
 \PassOptionsToPackage{dvipsnames}{xcolor}
-\documentclass[10pt,a4paper]{altacv}
+\documentclass[10pt,a4paper]{lib/altacv}
 \AtBeginEnvironment{itemize}{\small}
 \usepackage{hyperref}
 
@@ -11,9 +11,13 @@
 \definecolor{emphasis}{HTML}{212121}
 \definecolor{body}{HTML}{424242}
 
+\newcommand{\projects}[1]{\def\myprojects{#1}}
+\newcommand{\skills}[1]{\def\myskills{#1}}
+\ifdef\myjob{}{\def\myjob{jobs/web}}
+
 \begin{document}
 
-\job{mobile}
+\input{\myjob}
 \name{Omar Einea}
 \tagline{Research Assistant and Master's Student}
 \photo{2.75cm}{profile}
@@ -51,7 +55,7 @@
   \cvsection{Skills}
   \smallskip
 
-  \skillssection
+  \myskills
   \medskip
 
   \cvsection{Languages}
@@ -98,7 +102,7 @@
 
 \cvsection{Projects}
 
-\projectssection
+\myprojects
 \smallskip
 
 \cvsection{Activities}

@@ -34,7 +34,7 @@
 \LoadClass{extarticle}
 
 \RequirePackage[margin=2cm]{geometry}
-\RequirePackage{fontawesome5}
+\RequirePackage{lib/fontawesome5}
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
 
@@ -82,7 +82,6 @@
 
 \newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.5em}#2\hspace{2em}}}
 
-\newcommand{\job}[1]{\input{jobs/#1}}
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\photo}[2]{\def\@photo{#2}\def\@photodiameter{#1}}
@@ -95,8 +94,6 @@
 \newcommand{\location}[1]{\printinfo{\fa{map-marker-alt}}{#1}}
 
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
-\newcommand{\skills}[1]{\def\skillssection{#1}}
-\newcommand{\projects}[1]{\def\projectssection{#1}}
 \newcommand{\sidecolumn}[1]{\def\@sidecolumn{#1}}
 
 \newcommand{\makecvheader}{%

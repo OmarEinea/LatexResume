@@ -1,0 +1,3 @@
+JOB=$1
+xelatex "\def\myjob{jobs/$JOB}\input{resume.tex}" -job-name=$JOB -quiet
+rm -f $JOB.aux $JOB.log $JOB.out $JOB.bcf $JOB.run.xml $JOB.synctex.gz
