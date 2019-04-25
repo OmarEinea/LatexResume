@@ -11,6 +11,7 @@
 \definecolor{emphasis}{HTML}{212121}
 \definecolor{body}{HTML}{424242}
 
+\newcommand{\sidecolumn}[1]{\def\mysidecolumn{#1}}
 \newcommand{\details}[1]{\def\mydetails{#1}}
 \newcommand{\achievements}[1]{\def\myachievements{#1}}
 \newcommand{\skills}[1]{\def\myskills{#1}}
@@ -19,6 +20,8 @@
 \newcommand{\experience}[1]{\def\myexperience{#1}}
 \newcommand{\projects}[1]{\def\myprojects{#1}}
 \newcommand{\activities}[1]{\def\myactivities{#1}}
+\newcommand{\publications}[1]{\def\mypublications{#1}}
+\newcommand{\referees}[1]{\def\myreferees{\cvsection{Referees}#1}}
 \ifdef\myjob{}{\def\myjob{jobs/general}}
 
 \begin{document}
@@ -52,10 +55,9 @@
   \myeducation
 }
 
-\cvsection[sidecolumn]{Experience}
+\cvsection[\mysidecolumn]{Experience}
 
 \myexperience
-
 \smallskip
 
 \cvsection{Projects}
@@ -66,5 +68,15 @@
 \cvsection{Activities}
 
 \myactivities
+
+\ifdefined\mypublications
+
+\clearpage
+
+\cvsection[\myreferees]{Publications}
+
+\mypublications
+
+\fi
 
 \end{document}

@@ -94,7 +94,6 @@
 \newcommand{\location}[1]{\printinfo{\fa{map-marker-alt}}{#1}}
 
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
-\newcommand{\sidecolumn}[1]{\def\@sidecolumn{#1}}
 
 \newcommand{\makecvheader}{%
   \begingroup
@@ -121,7 +120,7 @@
 
 \newcommand{\cvsection}[2][]{%
   \bigskip%
-  \ifstrequal{#1}{sidecolumn}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\@sidecolumn}}{}%
+  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright #1}}%
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
   {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
 }
