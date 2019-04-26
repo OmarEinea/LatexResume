@@ -74,10 +74,10 @@
 \RequirePackage{changepage}
 
 \setlength{\parindent}{0pt}
-\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+\newcommand{\divider}{\textcolor{body!30}{\hdashrule{.99\linewidth}{0.6pt}{0.5ex}}\medskip}
 
 \newenvironment{fullwidth}{%
-  \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}
+  \begin{adjustwidth}{}{\dimexpr-.97\marginparwidth-\marginparsep\relax}
 }{\end{adjustwidth}}
 
 \newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.5em}#2\hspace{2em}}}
@@ -122,7 +122,7 @@
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright #1}}%
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
-  {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
+  {\color{heading}\rule{.97\linewidth}{2pt}\par}\medskip
 }
 
 \newcommand{\cvtitle}[1]{%
@@ -141,8 +141,8 @@
 
 \newcommand{\cvachievement}[3]{%
   \smallskip
-  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-  \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\ & #3
+  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{0em}} >{\raggedright\arraybackslash}X@{}}
+  \multirow{2}{*}{\hspace{-.3em}\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\ & #3
   \end{tabularx}%
   \medskip
 }
