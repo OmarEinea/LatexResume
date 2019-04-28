@@ -80,7 +80,7 @@
   \begin{adjustwidth}{}{\dimexpr-.97\marginparwidth-\marginparsep\relax}
 }{\end{adjustwidth}}
 
-\newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.5em}#2\hspace{2em}}}
+\newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont\parbox[t]{1em}{\centering #1}}\hspace{.5em}#2}}
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
