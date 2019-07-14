@@ -97,11 +97,11 @@
 
 \newcommand{\makecvheader}{%
   \begingroup
-    \ifdef{\@photodiameter}{\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
+    \ifdef{\@photodiameter}{\begin{minipage}{\dimexpr\linewidth-\@photodiameter}}{}%
     \raggedright\color{emphasis}%
     {\Huge\bfseries\MakeUppercase{\@name}\par}
-    \medskip
-    {\large\bfseries\color{accent}\@tagline\par}
+    % \medskip
+    % {\large\bfseries\color{accent}\@tagline\par}
     \medskip
     {\footnotesize\bfseries\@personalinfo\par}
     \ifdef{\@photodiameter}{%
