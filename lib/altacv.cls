@@ -100,8 +100,8 @@
     \ifdef{\@photodiameter}{\begin{minipage}{\dimexpr\linewidth-\@photodiameter}}{}%
     \raggedright\color{emphasis}%
     {\Huge\bfseries\MakeUppercase{\@name}\par}
-    % \medskip
-    % {\large\bfseries\color{accent}\@tagline\par}
+    \medskip
+    {\large\bfseries\color{accent}\@tagline\par}
     \medskip
     {\footnotesize\bfseries\@personalinfo\par}
     \ifdef{\@photodiameter}{%
@@ -113,7 +113,7 @@
       \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
     \fi%
     \end{minipage}\par}{}%
-  \endgroup\medskip
+  \endgroup\smallskip
 }
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
@@ -130,12 +130,20 @@
   \medskip
 }
 
-\newcommand{\cvevent}[4]{%
+\newcommand{\cvdated}[3]{%
   {\large\color{emphasis}#1\par}
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{\textbf{\color{accent}#2}\par}
-  \ifstrequal{#3}{}{}{{\smallskip\small\makebox[.5\linewidth][l]{\hspace{-.2em}\fa{calendar-alt}\hspace{.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[.5\linewidth][l]{\fa{map-marker-alt}\hspace{.5em}#4}}}\par
+  \ifstrequal{#3}{}{}{{\smallskip\small\makebox[.5\linewidth][l]{\hspace{-.2em}\fa{calendar-alt}\hspace{.5em}#3}}}\par
+  \medskip\normalsize
+}
+
+\newcommand{\cvevent}[4]{%
+  {\large\makebox[.62\linewidth][l]{\color{emphasis}#1}}
+  \ifstrequal{#3}{}{}{\small{\color{accent}\fa{calendar-alt}}\hspace{.5em}#3}%
+  \par\smallskip\normalsize
+  \ifstrequal{#2}{}{}{\textbf{\makebox[.62\linewidth][l]{\color{accent}#2}}}
+  \ifstrequal{#4}{}{}{\small\hspace{.08em}{\color{accent}\fa{map-marker-alt}}\hspace{.53em}#4}\par
   \medskip\normalsize
 }
 
@@ -147,8 +155,11 @@
   \medskip
 }
 
-\newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep=.75ex,text height=1.5ex,text depth=.25ex]{#1};
+\newcommand{\cvskill}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=.95ex,inner ysep=.7ex,text height=1.5ex,text depth=.25ex]{#1};
+}
+\newcommand{\cvtool}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=body!30,opacity=0.9,rounded corners,inner xsep=.8ex,inner ysep=.7ex,text height=1.2ex,text depth=.15ex]{\small#1};
 }
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}

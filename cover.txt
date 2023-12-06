@@ -1,0 +1,19 @@
+Dear Sir/Madam,
+
+I am writing to inquiry about the job posting you have made for Software Engineer II at your company. I believe I am a good fit for this position as I have a skill set which is similar to what you are looking for as well as a wide variety of skills in the field in general.
+I am an IT-Multimedia graduate, currently doing my Master's in Computer Science, and I love learning new technology. My skills range from Android, Java, XML, Android Studio, to Back-End Development, Firebase, SQL and Git. I believe I would make a great addition to your team, do take a look at my CV for more details.
+
+I am also active on GitHub and I upload most my projects there, check my profile out at: https://github.com/omareinea
+
+Sincerely,
+Omar.
+
+
+
+Dear Sir/Madam,
+
+I am writing to inquiry about the job posting you have made for Frontend Software Engineer at your company. I believe I am a good fit for this position as I have a skill set which is similar to what you are looking for as well as a wide variety of skills in the field in general.
+I am an IT-Multimedia graduate, currently doing my Master's in Computer Science, and I love learning new technology. My skills range from JavaScript, ReactJS, AngularJS, jQuery, CSS & HTML to handling advanced data structures and algorithms. I believe I would make a great addition to your team, do take a look at my CV for more details.
+
+Sincerely,
+Omar.

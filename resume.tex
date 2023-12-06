@@ -3,13 +3,14 @@
 \AtBeginEnvironment{itemize}{\small}
 \usepackage{hyperref}
 
-\geometry{top=1.5cm,bottom=1.5cm,left=1.4cm,right=8.7cm,marginparwidth=6.7cm,marginparsep=.8cm}
+\geometry{top=1cm,bottom=1.4cm,left=1.4cm,right=8.7cm,marginparwidth=6.7cm,marginparsep=.8cm}
 
 \setmainfont{Lato}
-\definecolor{heading}{HTML}{1a237e}
-\definecolor{accent}{HTML}{283593}
+\definecolor{heading}{HTML}{294179}
+\definecolor{accent}{HTML}{405892}
 \definecolor{emphasis}{HTML}{212121}
 \definecolor{body}{HTML}{424242}
+\definecolor{lightgray}{HTML}{f0f0f0}
 
 \newcommand{\sidecolumn}[1]{\def\mysidecolumn{#1}}
 \newcommand{\details}[1]{\def\mydetails{#1}}
@@ -22,6 +23,11 @@
 \newcommand{\activities}[1]{\def\myactivities{#1}}
 \newcommand{\publications}[1]{\def\mypublications{#1}}
 \newcommand{\referees}[1]{\def\myreferees{\cvsection{Referees}#1}}
+\newcommand{\sidebackground}[0]{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[rectangle, fill=lightgray, anchor=north, minimum width=8.7cm, minimum height=\paperheight+1cm] (box) at (15.5cm,2cm){};
+  \end{tikzpicture}  
+}
 \ifdef\myjob{}{\def\myjob{jobs/general}}
 
 \begin{document}
@@ -33,6 +39,7 @@
 \input{jobs/publications}
 \fi
 
+\sidebackground
 \mydetails
 
 \begin{fullwidth}
@@ -72,6 +79,8 @@
 \ifdefined\mypublications
 
 \clearpage
+
+\sidebackground
 
 \cvsection[\myreferees]{Publications}
 

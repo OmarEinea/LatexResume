@@ -1,7 +1,15 @@
-JOB=$1
-if [[ $2 = ref* ]]
-then REF="\def\references{}"
-else echo "Won't include references!"
+JOB="./jobs/$1.tex"
+if ! test -f $JOB; then
+  echo "Job file at $JOB does not exist!"
+  exit 127
 fi
-xelatex "\def\myjob{jobs/$JOB}$REF\input{resume.tex}" -job-name=$JOB -quiet
-rm -f $JOB.aux $JOB.log $JOB.out $JOB.bcf $JOB.run.xml $JOB.synctex.gz
+
+if [[ $2 = ref* ]]; then
+  REF="\def\references{}"
+else
+  echo "Won't include references!"
+fi
+
+lualatex "\def\myjob{$JOB}$REF\input{resume.tex}" > compile.log
+rm -f resume.aux resume.log resume.out compile.log
+echo -e "\nDone ^_^\nOutput at: resume.pdf"
